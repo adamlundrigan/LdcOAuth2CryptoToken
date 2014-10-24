@@ -1,0 +1,12 @@
+<?php
+return array(
+    'ldc-oauth2-crypto-token' => array(
+        // Also use pre-configured zf-oauth2 storage?
+        // (will store access tokens in database)
+        'inject_existing_storage' => false,
+        'keys' => array(
+            'public_key'  => 'data/keys/pubkey.pem',
+            'private_key' => 'data/keys/privkey.pem',
+        ),
+    ),
+);
