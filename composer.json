@@ -12,6 +12,12 @@
     "require": {
         "zfcampus/zf-oauth2": "1.*"
     },
+    "require-dev": {
+        "phpunit/phpunit": "4.*",
+        "mockery/mockery": "0.*",
+        "fabpot/php-cs-fixer": "@stable",
+        "zendframework/zend-servicemanager": "2.*"
+    },
     "autoload": {
         "psr-4": {
             "LdcOAuth2CryptoToken\\": "src/"
