@@ -66,4 +66,50 @@ class CryptoTokenServiceFactoryTest extends TestCase
 
         $this->assertInstanceOf('OAuth2\Server', $obj);
     }
+    
+    public function testDelegatorEnforcesPublicKeyRequirement()
+    {
+        $name = 'ZF\OAuth2\Service\OAuth2Server';
+        $callback = function () {
+            $mock = \Mockery::mock('OAuth2\Server');
+            return $mock;
+        };
+        
+        $serviceManager = \Mockery::mock('Zend\ServiceManager\ServiceLocatorInterface');
+        $serviceManager->shouldReceive('get')->with('Config')->andReturn(array(
+            'ldc-oauth2-crypto-token' => array(
+                'inject_existing_storage' => false,
+                'keys' => array()
+            ),
+        ));
+
+        $this->setExpectedException('LdcOAuth2CryptoToken\Factory\Exception\KeyFileNotFoundException');
+        
+        $factory = new CryptoTokenServerFactory();
+        $obj = $factory->createDelegatorWithName($serviceManager, $name, $name, $callback);
+    }
+    
+    public function testDelegatorEnforcesPrivateKeyRequirement()
+    {
+        $name = 'ZF\OAuth2\Service\OAuth2Server';
+        $callback = function () {
+            $mock = \Mockery::mock('OAuth2\Server');
+            return $mock;
+        };
+        
+        $serviceManager = \Mockery::mock('Zend\ServiceManager\ServiceLocatorInterface');
+        $serviceManager->shouldReceive('get')->with('Config')->andReturn(array(
+            'ldc-oauth2-crypto-token' => array(
+                'inject_existing_storage' => false,
+                'keys' => array(
+                    'public_key' => __DIR__ . '/../TestAssets/id_rsa',
+                )
+            ),
+        ));
+
+        $this->setExpectedException('LdcOAuth2CryptoToken\Factory\Exception\KeyFileNotFoundException');
+        
+        $factory = new CryptoTokenServerFactory();
+        $obj = $factory->createDelegatorWithName($serviceManager, $name, $name, $callback);
+    }
 }
