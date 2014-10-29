@@ -12,15 +12,15 @@ class CryptoTokenServerFactory implements DelegatorFactoryInterface
 
         $config = $serviceLocator->get('Config');
 
-        // Retrieve the pre-configured storage instance 
+        // Retrieve the pre-configured storage instance
         $coreStorage = $config['ldc-oauth2-crypto-token']['inject_existing_storage'] === true
             ? $serviceLocator->get($config['zf-oauth2']['storage'])
-            : NULL;
-        
+            : null;
+
         // Load the public and private key files
         $publicKey  = file_get_contents($config['ldc-oauth2-crypto-token']['keys']['public_key']);
         $privateKey = file_get_contents($config['ldc-oauth2-crypto-token']['keys']['private_key']);
-        
+
         // Instantiate in-memory storage for our keys
         $storage = new \OAuth2\Storage\Memory(array(
             'keys' => array(
@@ -36,7 +36,7 @@ class CryptoTokenServerFactory implements DelegatorFactoryInterface
         // make the "token" response type a CryptoToken
         $cryptoResponseType = new \OAuth2\ResponseType\CryptoToken($storage, $coreStorage);
         $server->addResponseType($cryptoResponseType);
-        
+
         return $server;
     }
 }
