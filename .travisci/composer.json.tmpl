@@ -1,0 +1,27 @@
+{
+    "name": "adamlundrigan/ldc-oauth2-crypto-token",
+    "description": "JWT CryptoToken configuration for zf-oauth2",
+    "keywords": [ "zf-oauth2", "apigility", "jwt" ],
+    "license": "BSD-3-Clause",
+    "authors": [
+        {
+            "name": "Adam Lundrigan",
+            "email": "adam@lundrigan.ca"
+        }
+    ],
+    "require": {
+        "zfcampus/zf-oauth2": "1.*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "4.*",
+        "mockery/mockery": "0.*",
+        "fabpot/php-cs-fixer": "@stable",
+        "zendframework/zend-servicemanager": "{{ZF2_VERSION}}"
+    },
+    "autoload": {
+        "psr-4": {
+            "LdcOAuth2CryptoToken\\": "src/"
+        },
+        "files": ["Module.php"]
+    }
+}
