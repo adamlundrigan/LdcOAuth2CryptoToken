@@ -23,7 +23,7 @@ class CryptoTokenServerFactory implements DelegatorFactoryInterface
         if ( ! isset($config['ldc-oauth2-crypto-token']['keys']['private_key']) || ! file_exists($config['ldc-oauth2-crypto-token']['keys']['private_key']) ) {
             throw new Exception\KeyFileNotFoundException('You must provide a private key to use LdcOAuth2CryptoToken!');
         }
-        
+
         // Load the public and private key files
         $publicKey  = file_get_contents($config['ldc-oauth2-crypto-token']['keys']['public_key']);
         $privateKey = file_get_contents($config['ldc-oauth2-crypto-token']['keys']['private_key']);
