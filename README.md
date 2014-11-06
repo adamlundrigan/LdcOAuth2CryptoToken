@@ -2,12 +2,11 @@
 
 Reconfigures [`zf-oauth2`](https://github.com/zfcampus/zf-oauth2) to issue [JWT crypto tokens](http://bshaffer.github.io/oauth2-server-php-docs/overview/crypto-tokens/).
 
----
-[![Latest Stable Version](https://poser.pugx.org/adamlundrigan/ldc-oauth2-crypto-token/v/stable.svg)](https://packagist.org/packages/adamlundrigan/ldc-oauth2-crypto-token) [![Total Downloads](https://poser.pugx.org/adamlundrigan/ldc-oauth2-crypto-token/downloads.svg)](https://packagist.org/packages/adamlundrigan/ldc-oauth2-crypto-token) [![Latest Unstable Version](https://poser.pugx.org/adamlundrigan/ldc-oauth2-crypto-token/v/unstable.svg)](https://packagist.org/packages/adamlundrigan/ldc-oauth2-crypto-token) [![License](https://poser.pugx.org/adamlundrigan/ldc-oauth2-crypto-token/license.svg)](https://packagist.org/packages/adamlundrigan/ldc-oauth2-crypto-token)
-[![Build Status](https://travis-ci.org/adamlundrigan/LdcOAuth2CryptoToken.svg?branch=master)](https://travis-ci.org/adamlundrigan/LdcOAuth2CryptoToken)
-[![Code Coverage](https://scrutinizer-ci.com/g/adamlundrigan/LdcOAuth2CryptoToken/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/Ocramius/Instantiator/?branch=master)
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/adamlundrigan/LdcOAuth2CryptoToken/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/adamlundrigan/LdcOAuth2CryptoToken/?branch=master)
----
+----
+
+[![Latest Stable Version](https://poser.pugx.org/adamlundrigan/ldc-oauth2-crypto-token/v/stable.svg)](https://packagist.org/packages/adamlundrigan/ldc-oauth2-crypto-token) [![License](https://poser.pugx.org/adamlundrigan/ldc-oauth2-crypto-token/license.svg)](https://packagist.org/packages/adamlundrigan/ldc-oauth2-crypto-token) [![Build Status](https://travis-ci.org/adamlundrigan/LdcOAuth2CryptoToken.svg?branch=master)](https://travis-ci.org/adamlundrigan/LdcOAuth2CryptoToken) [![Code Coverage](https://scrutinizer-ci.com/g/adamlundrigan/LdcOAuth2CryptoToken/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/adamlundrigan/LdcOAuth2CryptoToken/?branch=master) [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/adamlundrigan/LdcOAuth2CryptoToken/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/adamlundrigan/LdcOAuth2CryptoToken/?branch=master)
+
+----
 
 ## How?
 
