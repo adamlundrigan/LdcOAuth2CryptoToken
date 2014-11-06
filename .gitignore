@@ -13,5 +13,6 @@ vendor/*
 vagrant/.vagrant
 
 tests/log/*
+!tests/log/.gitkeep
 tests/TestConfiguration.php
 
