@@ -13,7 +13,7 @@ Reconfigures [`zf-oauth2`](https://github.com/zfcampus/zf-oauth2) to issue [JWT 
 1. Install module using Composer
 
    ```
-   composer install adamlundrigan/ldc-oauth2-crypto-token:<version>
+   composer require adamlundrigan/ldc-oauth2-crypto-token:<version>
    ```
 
 2. Enable required modules in your `application.config.php` file:
