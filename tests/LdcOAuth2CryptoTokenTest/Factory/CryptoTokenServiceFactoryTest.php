@@ -21,9 +21,9 @@ class CryptoTokenServiceFactoryTest extends TestCase
             'ldc-oauth2-crypto-token' => array(
                 'inject_existing_storage' => false,
                 'keys' => array(
-                    'public_key' => __DIR__ . '/../TestAssets/id_rsa',
-                    'private_key' => __DIR__ . '/../TestAssets/id_rsa.pub',
-                )
+                    'public_key' => __DIR__.'/../TestAssets/id_rsa',
+                    'private_key' => __DIR__.'/../TestAssets/id_rsa.pub',
+                ),
             ),
         ));
 
@@ -49,13 +49,13 @@ class CryptoTokenServiceFactoryTest extends TestCase
             'ldc-oauth2-crypto-token' => array(
                 'inject_existing_storage' => true,
                 'keys' => array(
-                    'public_key' => __DIR__ . '/../TestAssets/id_rsa',
-                    'private_key' => __DIR__ . '/../TestAssets/id_rsa.pub',
-                )
+                    'public_key' => __DIR__.'/../TestAssets/id_rsa',
+                    'private_key' => __DIR__.'/../TestAssets/id_rsa.pub',
+                ),
             ),
             'zf-oauth2' => array(
                 'storage' => 'MockStorageClass',
-            )
+            ),
         ));
         $serviceManager->shouldReceive('get')
                        ->with('MockStorageClass')
@@ -80,7 +80,7 @@ class CryptoTokenServiceFactoryTest extends TestCase
         $serviceManager->shouldReceive('get')->with('Config')->andReturn(array(
             'ldc-oauth2-crypto-token' => array(
                 'inject_existing_storage' => false,
-                'keys' => array()
+                'keys' => array(),
             ),
         ));
 
@@ -104,8 +104,8 @@ class CryptoTokenServiceFactoryTest extends TestCase
             'ldc-oauth2-crypto-token' => array(
                 'inject_existing_storage' => false,
                 'keys' => array(
-                    'public_key' => __DIR__ . '/../TestAssets/id_rsa',
-                )
+                    'public_key' => __DIR__.'/../TestAssets/id_rsa',
+                ),
             ),
         ));
 

@@ -17,10 +17,10 @@ class CryptoTokenServerFactory implements DelegatorFactoryInterface
             ? $serviceLocator->get($config['zf-oauth2']['storage'])
             : null;
 
-        if ( ! isset($config['ldc-oauth2-crypto-token']['keys']['public_key']) || ! file_exists($config['ldc-oauth2-crypto-token']['keys']['public_key']) ) {
+        if (! isset($config['ldc-oauth2-crypto-token']['keys']['public_key']) || ! file_exists($config['ldc-oauth2-crypto-token']['keys']['public_key'])) {
             throw new Exception\KeyFileNotFoundException('You must provide a public key to use LdcOAuth2CryptoToken!');
         }
-        if ( ! isset($config['ldc-oauth2-crypto-token']['keys']['private_key']) || ! file_exists($config['ldc-oauth2-crypto-token']['keys']['private_key']) ) {
+        if (! isset($config['ldc-oauth2-crypto-token']['keys']['private_key']) || ! file_exists($config['ldc-oauth2-crypto-token']['keys']['private_key'])) {
             throw new Exception\KeyFileNotFoundException('You must provide a private key to use LdcOAuth2CryptoToken!');
         }
 
