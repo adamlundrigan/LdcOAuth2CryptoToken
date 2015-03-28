@@ -37,11 +37,11 @@ class CryptoTokenServerFactory implements DelegatorFactoryInterface
         ));
 
         // Make the "access_token" storage use Crypto Tokens instead of a database
-        $cryptoStorage = new \OAuth2\Storage\CryptoToken($storage, $coreStorage);
+        $cryptoStorage = new \OAuth2\Storage\JwtAccessToken($storage, $coreStorage);
         $server->addStorage($cryptoStorage, "access_token");
 
         // make the "token" response type a CryptoToken
-        $cryptoResponseType = new \OAuth2\ResponseType\CryptoToken($storage, $coreStorage);
+        $cryptoResponseType = new \OAuth2\ResponseType\JwtAccessToken($storage, $coreStorage);
         $server->addResponseType($cryptoResponseType);
 
         return $server;
