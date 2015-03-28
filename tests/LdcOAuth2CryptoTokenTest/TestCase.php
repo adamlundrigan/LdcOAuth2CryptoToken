@@ -1,11 +1,12 @@
 <?php
+
 namespace LdcOAuth2CryptoTokenTest;
 
 use Zend\ServiceManager\ServiceManager;
 use Zend\Mvc\Service\ServiceManagerConfig;
 
 /**
- * Base test case to be used when a service manager instance is required
+ * Base test case to be used when a service manager instance is required.
  */
 class TestCase extends \PHPUnit_Framework_TestCase
 {
@@ -16,6 +17,7 @@ class TestCase extends \PHPUnit_Framework_TestCase
 
     /**
      * @static
+     *
      * @param array $configuration
      */
     public static function setConfiguration(array $configuration)
@@ -25,6 +27,7 @@ class TestCase extends \PHPUnit_Framework_TestCase
 
     /**
      * @static
+     *
      * @return array
      */
     public static function getConfiguration()
@@ -33,9 +36,10 @@ class TestCase extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Retrieves a new ServiceManager instance
+     * Retrieves a new ServiceManager instance.
      *
-     * @param  array|null     $configuration
+     * @param array|null $configuration
+     *
      * @return ServiceManager
      */
     public function getServiceManager(array $configuration = null)

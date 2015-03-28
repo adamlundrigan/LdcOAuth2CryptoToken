@@ -1,4 +1,5 @@
 <?php
+
 namespace LdcOAuth2CryptoToken\Factory;
 
 use Zend\ServiceManager\DelegatorFactoryInterface;

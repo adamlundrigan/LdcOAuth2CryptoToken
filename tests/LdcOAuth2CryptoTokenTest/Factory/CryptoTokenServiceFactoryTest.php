@@ -1,4 +1,5 @@
 <?php
+
 namespace LdcOAuth2CryptoTokenTest\Factory;
 
 use LdcOAuth2CryptoTokenTest\TestCase;
