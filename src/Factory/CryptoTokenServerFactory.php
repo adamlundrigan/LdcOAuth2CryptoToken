@@ -1,4 +1,5 @@
 <?php
+
 namespace LdcOAuth2CryptoToken\Factory;
 
 use Zend\ServiceManager\DelegatorFactoryInterface;
@@ -38,7 +39,7 @@ class CryptoTokenServerFactory implements DelegatorFactoryInterface
 
         // Make the "access_token" storage use Crypto Tokens instead of a database
         $cryptoStorage = new \OAuth2\Storage\CryptoToken($storage, $coreStorage);
-        $server->addStorage($cryptoStorage, "access_token");
+        $server->addStorage($cryptoStorage, 'access_token');
 
         // make the "token" response type a CryptoToken
         $cryptoResponseType = new \OAuth2\ResponseType\CryptoToken($storage, $coreStorage);

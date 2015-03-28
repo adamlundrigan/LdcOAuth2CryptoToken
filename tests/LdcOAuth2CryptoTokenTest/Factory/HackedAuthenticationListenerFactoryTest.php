@@ -1,4 +1,5 @@
 <?php
+
 namespace LdcOAuth2CryptoTokenTest\Factory;
 
 use LdcOAuth2CryptoTokenTest\TestCase;
@@ -30,7 +31,7 @@ class HackedAuthenticationListenerFactoryTest extends TestCase
     public function testDelegatorBailsIfParentFactoryFails()
     {
         $name = 'ZF\MvcAuth\Authentication\DefaultAuthenticationListener';
-        $callback = function () { return null; };
+        $callback = function () { return; };
 
         $sl = \Mockery::mock('Zend\ServiceManager\ServiceLocatorInterface');
 
