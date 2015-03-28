@@ -1,6 +1,6 @@
 # LdcOAuth2CryptoToken
 
-Reconfigures [`zf-oauth2`](https://github.com/zfcampus/zf-oauth2) to issue [JWT crypto tokens](http://bshaffer.github.io/oauth2-server-php-docs/overview/crypto-tokens/).
+Reconfigures [`zf-oauth2`](https://github.com/zfcampus/zf-oauth2) to issue [JWT access tokens](http://bshaffer.github.io/oauth2-server-php-docs/overview/jwt-access-tokens/).
 
 ----
 
@@ -13,8 +13,10 @@ Reconfigures [`zf-oauth2`](https://github.com/zfcampus/zf-oauth2) to issue [JWT 
 1. Install module using Composer
 
    ```
-   composer require adamlundrigan/ldc-oauth2-crypto-token:<version>
+   composer require adamlundrigan/ldc-oauth2-crypto-token:~2.0
    ```
+
+   > NOTE: If your application requires `bshaffer/oauth2-server-php` version < 1.6, use V1 of this module.
 
 2. Enable required modules in your `application.config.php` file:
 
