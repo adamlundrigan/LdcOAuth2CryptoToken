@@ -12,8 +12,8 @@ class CryptoTokenServiceFactoryTest extends TestCase
         $name = 'ZF\OAuth2\Service\OAuth2Server';
         $callback = function () {
             $mock = \Mockery::mock('OAuth2\Server');
-            $mock->shouldReceive('addStorage')->with(\Mockery::type('OAuth2\Storage\CryptoToken'), 'access_token');
-            $mock->shouldReceive('addResponseType')->with(\Mockery::type('OAuth2\ResponseType\CryptoToken'));
+            $mock->shouldReceive('addStorage')->with(\Mockery::type('OAuth2\Storage\JwtAccessToken'), 'access_token');
+            $mock->shouldReceive('addResponseType')->with(\Mockery::type('OAuth2\ResponseType\JwtAccessToken'));
 
             return $mock;
         };
@@ -39,8 +39,8 @@ class CryptoTokenServiceFactoryTest extends TestCase
         $name = 'ZF\OAuth2\Service\OAuth2Server';
         $callback = function () {
             $mock = \Mockery::mock('OAuth2\Server');
-            $mock->shouldReceive('addStorage')->with(\Mockery::type('OAuth2\Storage\CryptoToken'), 'access_token');
-            $mock->shouldReceive('addResponseType')->with(\Mockery::type('OAuth2\ResponseType\CryptoToken'));
+            $mock->shouldReceive('addStorage')->with(\Mockery::type('OAuth2\Storage\JwtAccessToken'), 'access_token');
+            $mock->shouldReceive('addResponseType')->with(\Mockery::type('OAuth2\ResponseType\JwtAccessToken'));
 
             return $mock;
         };
